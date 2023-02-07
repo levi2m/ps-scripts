@@ -12,10 +12,6 @@ This folder contains a collection of useful PowerShell scripts that can simplify
 
 The scripts in this folder are organized by categories and each script has a brief description of its purpose.
 
-### Example
-
--   `example.ps1` - This script is an example script that demonstrates the basic structure of a PowerShell script.
-
 ## Prerequisites
 
 -   Windows Operating System
