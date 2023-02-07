@@ -1,14 +1,6 @@
-# Java Uninstallation Script
+# Dell Software Removal Script
 
-## Description
-
-This script is designed to uninstall all Java runtime environments on a local machine except for the most recently installed Java runtime environment. The script performs the following tasks:
-
-1.  Retrieves the list of all installed Java runtime environments in the registry.
-2.  Filters the list based on display name.
-3.  Sorts the list in descending order of the installation date.
-4.  Sets the first item in the sorted list to the $lastJava variable.
-5.  Uninstalls each Java runtime environment except for the $lastJava using the quiet switch /quiet to run the uninstall process without user interaction.
+This PowerShell script is designed to remove all Dell software installed on a local machine, with the exception of Dell SupportAssist, which can only be reinstalled by an administrator user. Non-admin users will not be able to install Dell SupportAssist on the machine.
 
 ## Requirements
 
@@ -19,7 +11,8 @@ This script is designed to uninstall all Java runtime environments on a local ma
 
 1.  Download the script file.
 2.  Right-click the script file and select "Run with PowerShell".
-3.  The script will uninstall all Java runtime environments except for the most recently installed Java runtime environment.
+3.  The script will remove all Dell software except for Dell SupportAssist.
+4.  If the current user is not an administrator, Dell SupportAssist will be uninstalled as well.
 
 ## Note
 
