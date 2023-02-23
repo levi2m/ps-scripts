@@ -1,26 +1,41 @@
-# Java Uninstallation Script
+# :computer: Java Version Management Script :coffee:
 
-## Description
+This is a PowerShell script for managing Java Runtime Environment (JRE) versions on Windows computers. It can be used to ensure that only the latest version of JRE is installed, and older versions are uninstalled.
 
-This script is designed to uninstall all Java runtime environments on a local machine except for the most recently installed Java runtime environment. The script performs the following tasks:
+## :gear: Features
 
-1.  Retrieves the list of all installed Java runtime environments in the registry.
-2.  Filters the list based on display name.
-3.  Sorts the list in descending order of the installation date.
-4.  Sets the first item in the sorted list to the $lastJava variable.
-5.  Uninstalls each Java runtime environment except for the $lastJava using the quiet switch /quiet to run the uninstall process without user interaction.
+- Automatically installs JRE 8 Update 361 if no JRE is detected on the system.
+- Uninstalls all older JRE versions, keeping only the newest version.
+- Verifies that the newest version of JRE is correctly installed.
+- Returns an exit code to Intune, allowing it to track the success or failure of the script.
+- Runs silently, without showing any prompts or notifications to the user.
+- Creates a log file if the JRE 8 Update 361 installation fails.
+- Uses plenty of emojis to make it more fun! :partying_face:
 
-## Requirements
+## :rocket: Getting Started
 
--   Windows operating system
--   PowerShell installed
+1. Download the script and save it as a .ps1 file.
+2. Upload the script to your Intune portal.
+3. Create a new Intune policy to run the script on your Windows devices.
+4. Configure the policy to run the script silently, without user interaction.
+5. Enjoy the benefits of automatically managing your JRE versions! :sunglasses:
 
-## Usage
+## :warning: Notes
 
-1.  Download the script file.
-2.  Right-click the script file and select "Run with PowerShell".
-3.  The script will uninstall all Java runtime environments except for the most recently installed Java runtime environment.
+- This script is designed for use on Windows computers only.
+- The script requires administrative privileges to install and uninstall JRE versions.
+- The script will download and install JRE 8 Update 361 if no JRE versions are detected on the system. If you prefer a different version, you can modify the script to download and install a different version.
+- If the JRE 8 Update 361 installation fails, the script will create a log file in the system's temp folder. The log file can be used to diagnose the issue.
+- The script does not check for or manage Java Development Kit (JDK) versions.
 
-## Note
+## :handshake: Contributing
 
-Please note that this script is provided as is, without any warranties or guarantees. Use it at your own risk and make sure to backup your data before running the script.
+If you find a bug or have a suggestion for improving the script, please feel free to create an issue or pull request on GitHub. We welcome contributions from the community! :muscle:
+
+## :memo: License
+
+This script is released under the MIT license. See the LICENSE file for more details.
+
+---
+
+Thanks for using our Java Version Management Script! :pray: If you have any questions or feedback, don't hesitate to contact us. Happy scripting! :tada:
